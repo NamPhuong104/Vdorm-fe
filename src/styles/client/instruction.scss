@@ -1,0 +1,289 @@
+@import 'colors';
+
+@media screen and (max-width: 360px) {
+  .ant-layout-content > .client-instruction-content {
+    .client-instruction-thumbnail {
+      height: 50vh !important;
+      .client-instruction-thumbnail-title {
+        font-size: 80px;
+      }
+    }
+    .client-instruction-main-content {
+      .section-1 {
+        padding: 20px;
+        .category-btns .ant-btn {
+          box-sizing: content-box;
+          flex-wrap: wrap;
+          margin: 5px 10px;
+          padding: 5px 20px;
+        }
+        .ant-row .ant-col > .category-content {
+          h2 {
+            font-size: 3.5em;
+          }
+          h3 {
+            font-size: 1.2em;
+          }
+          p,
+          li {
+            font-size: 1em;
+          }
+          b,
+          li::marker {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 767px) {
+  .ant-layout-content > .client-instruction-content {
+    .client-instruction-thumbnail {
+      height: 50vh !important;
+      .client-instruction-thumbnail-title {
+        font-size: 90px;
+      }
+    }
+    .client-instruction-main-content {
+      .section-1 {
+        padding: 20px;
+        .category-btns .ant-btn {
+          box-sizing: content-box;
+          flex-wrap: wrap;
+          margin: 5px 20px;
+          padding: 5px 20px;
+        }
+        .ant-row .ant-col > .category-content {
+          h2 {
+            font-size: 4em;
+          }
+          h3 {
+            font-size: 1.3em;
+          }
+          p,
+          li {
+            font-size: 1em;
+          }
+          b,
+          li::marker {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 766px) and (max-width: 1024px) {
+  .ant-layout-content > .client-instruction-content {
+    .client-instruction-thumbnail {
+      height: 50vh !important;
+      .client-instruction-thumbnail-title {
+        font-size: 120px;
+      }
+    }
+    .client-instruction-main-content {
+      .section-1 {
+        padding: 25px 50px;
+        .category-btns .ant-btn {
+          box-sizing: content-box;
+          flex-wrap: wrap;
+          margin: 5px 20px;
+          padding: 5px 10px;
+        }
+        .ant-row .ant-col > .category-content {
+          h2 {
+            font-size: 5em;
+          }
+          h3 {
+            font-size: 1.5em;
+          }
+          p,
+          li {
+            font-size: 1.2em;
+          }
+          b,
+          li::marker {
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1516px) {
+  .ant-layout-content > .client-instruction-content {
+    .client-instruction-thumbnail .client-instruction-thumbnail-title {
+      font-size: 140px;
+    }
+    .client-instruction-main-content {
+      .section-1 {
+        padding: 25px 50px;
+        .category-btns .ant-btn {
+          box-sizing: content-box;
+          flex-wrap: wrap;
+          margin: 5px 20px;
+          padding: 5px 10px;
+        }
+        .ant-row .ant-col > .category-content {
+          h2 {
+            font-size: 6em;
+          }
+          h3 {
+            font-size: 1.5em;
+          }
+          p,
+          li {
+            font-size: 1.2em;
+          }
+          b,
+          li::marker {
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1517px) {
+  .ant-layout-content > .client-instruction-content {
+    .client-instruction-thumbnail .client-instruction-thumbnail-title {
+      font-size: 140px;
+    }
+    .client-instruction-main-content {
+      .section-1 {
+        padding: 25px 50px;
+        .category-btns .ant-btn {
+          box-sizing: content-box;
+          flex-wrap: wrap;
+          margin: 5px 20px;
+          padding: 5px 10px;
+          span {
+            font-size: 1.2em;
+          }
+        }
+        .ant-row .ant-col .category-content {
+          h2 {
+            font-size: 6em;
+          }
+          h3 {
+            font-size: 1.5em;
+          }
+          p,
+          li {
+            font-size: 1.2em;
+          }
+          b,
+          li::marker {
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.client-instruction {
+  .ant-layout-content > .client-instruction-content {
+    font-size: 16px;
+    .client-instruction-thumbnail {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 300px;
+      height: 100vh;
+      .client-instruction-thumbnail-title {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        row-gap: 10px;
+        font-family: var(--font-shelia) !important;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+    }
+    .client-instruction-main-content {
+      .section-1 {
+        height: fit-content;
+        .category-btns {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+          .ant-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+              color: $red-1;
+            }
+            svg > path {
+              fill: $red-1;
+            }
+            &:hover {
+              border-color: $red-1;
+              transform: translateY(5%);
+            }
+          }
+        }
+        .ant-row .ant-col {
+          .category-content {
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            line-height: 1.5em;
+            overflow: hidden;
+            .main-content {
+              padding: 20px;
+            }
+            h2 {
+              font-family: var(--font-shelia) !important;
+              line-height: 1;
+              color: $red-2;
+              text-align: center;
+            }
+            h3 {
+              line-height: 1.5;
+              padding-top: 15px;
+            }
+            p,
+            li {
+              text-align: justify;
+              padding-top: 12px;
+              line-height: 1.5;
+            }
+            b,
+            li::marker {
+              color: $red-2;
+              font-weight: 600;
+              line-height: 1.5;
+            }
+            .room-register-list {
+              list-style-type: decimal;
+              list-style-position: inside;
+              .a {
+                list-style-type: lower-alpha;
+                list-style-position: inside;
+              }
+            }
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6) {
+              padding-top: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

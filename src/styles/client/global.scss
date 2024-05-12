@@ -1,0 +1,516 @@
+@import 'colors';
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  color: white !important;
+  transition: all 5000s ease-in-out 0s;
+}
+
+.client-header {
+  position: fixed !important;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent !important;
+  border-style: none !important ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+
+  .ant-btn-icon-only {
+    background-color: transparent !important;
+    border-style: none;
+    color: #fff !important;
+  }
+
+  .ant-menu {
+    flex: 1 1 auto;
+    height: 100%;
+    justify-content: flex-end;
+    background-color: transparent !important;
+    border-style: none !important;
+
+    .ant-menu-item {
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+      padding: 0px 12px;
+
+      &:hover {
+        color: #ffffff;
+        background-color: $blue-1;
+        text-decoration: none;
+        .ant-menu-title-content {
+          color: $yellow-1;
+          transition: color 0.1s ease;
+        }
+      }
+
+      &:hover::after {
+        border-bottom-color: white !important;
+      }
+    }
+
+    .ant-menu-item-selected {
+      background-color: rgba(255, 255, 255, 0.267) !important;
+    }
+
+    .ant-menu-item-selected::after {
+      border-bottom: none !important;
+    }
+  }
+}
+
+.ant-dropdown {
+  .ant-dropdown-menu {
+    .ant-dropdown-menu-item-group-title {
+      color: rgba(0, 0, 0, 0.88) !important;
+      font-weight: 700 !important;
+    }
+
+    .ant-dropdown-menu-title-content > span {
+      font-weight: 700;
+    }
+  }
+}
+
+.client-header.scrolled {
+  background-color: $blue-2 !important;
+  box-shadow: none !important;
+  transition: 100ms ease-in;
+  z-index: 1000;
+}
+
+.ant-layout-footer {
+  padding: 0 50px;
+  background-color: $blue-1 !important;
+
+  .footer-container {
+    height: 100%;
+
+    .footer-logo {
+      padding: 20px 0px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+
+      .ant-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .ant-image-img {
+          width: 20%;
+        }
+      }
+    }
+
+    .footer-main-content {
+      padding: 30px 0px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+
+      .contact-form {
+        .contact-form-title {
+          color: #fff;
+          font-size: 2em;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+
+        .ant-form-item {
+          margin: 0;
+          padding: 15px 0;
+
+          .ant-form-item-row {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .ant-form-item-label {
+              label {
+                color: #fff !important;
+                font-weight: 400;
+                font-size: 1.2em;
+              }
+
+              .ant-form-item-required::before {
+                content: '';
+              }
+            }
+
+            .ant-form-item-control {
+              min-height: 32px;
+              width: 100%;
+
+              input {
+                background-color: transparent;
+                border-style: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.322);
+                border-radius: 0;
+                color: #fff !important;
+                padding: 5px 0px;
+                font-size: 1.1em;
+                box-shadow: none;
+              }
+
+              .ant-input-group-addon {
+                color: white !important;
+                border-style: none;
+              }
+            }
+          }
+        }
+
+        .submit-contact-form-btn {
+          margin-top: 30px;
+          position: relative;
+          width: 96%;
+          padding: 12px 24px;
+          line-height: 1.5;
+          font-size: 1.125rem;
+          font-weight: 700;
+          background: $red-1;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+
+          &:hover {
+            background: $red-2;
+
+            svg {
+              fill: $red-2;
+            }
+
+            svg path {
+              fill: $red-2;
+            }
+
+            svg plygon {
+              fill: $red-2;
+            }
+
+            svg circle {
+              fill: $red-2;
+            }
+          }
+
+          svg {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 100%;
+            width: auto;
+          }
+        }
+      }
+
+      .footer-address {
+        padding-bottom: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.322);
+
+        .ant-typography {
+          font-size: 2em;
+          font-weight: 600;
+          width: fit-content;
+        }
+
+        .ant-flex {
+          padding: 10px 0px;
+        }
+
+        .address,
+        .ant-typography {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .footer-copyright {
+      padding: 10px 0px;
+
+      .ant-flex {
+        color: $red-1;
+        font-weight: 600;
+
+        .ant-space > .ant-space-item {
+          svg {
+            height: 1.5em;
+
+            path {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.client-content .ant-layout-content {
+  min-height: 99vh;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 360px) {
+  .client-header {
+    height: 50px !important;
+    padding: 0px 20px !important;
+  }
+
+  .client-header-logo {
+    margin-left: 0px !important;
+    padding: 0px;
+
+    img {
+      width: 80px !important;
+      height: 20px !important;
+    }
+  }
+
+  .ant-layout-footer {
+    padding: 0 20px !important;
+
+    .footer-container {
+      .footer-logo > a > .ant-image > img {
+        width: 70% !important;
+      }
+
+      .footer-main-content {
+        padding: 15px 0px !important;
+
+        .ant-row > .ant-col:has(.footer-address) {
+          .address span {
+            line-height: 1.5em;
+          }
+        }
+
+        .contact-form {
+          .ant-form-item {
+            padding: 0px 0px !important;
+
+            .ant-form-item-row {
+              .ant-form-item-label {
+                padding: 0px !important;
+
+                label {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+
+          .contact-form-title {
+            text-align: center;
+            margin: 0px 0px 15px !important;
+            font-size: 20px;
+          }
+
+          .submit-contact-form-btn {
+            margin: 8px 0px 0px !important;
+            width: calc(100% - 28px);
+            padding: 8px 24px;
+            font-size: 15px !important;
+          }
+        }
+
+        .footer-address {
+          h2 {
+            font-size: 20px !important;
+          }
+
+          span {
+            font-size: 15px !important;
+          }
+
+          .ant-typography {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 8px;
+          }
+        }
+      }
+
+      .footer-copyright {
+        .ant-flex {
+          flex-direction: column-reverse;
+          row-gap: 15px;
+          text-align: center;
+
+          span {
+            color: $red-1;
+            font-weight: 700;
+            line-height: 1.2em;
+            font-size: 15px;
+          }
+
+          .ant-space > .ant-space-item svg {
+            height: 1.1em !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 767px) {
+  .client-header {
+    height: 50px !important;
+    padding: 0px 20px !important;
+  }
+
+  .client-header-logo {
+    margin-left: 0px !important;
+    padding: 0px;
+
+    img {
+      width: 135px;
+      height: 35px;
+    }
+  }
+
+  .ant-layout-footer {
+    padding: 0 20px !important;
+
+    .footer-container {
+      .footer-logo > a > .ant-image > img {
+        width: 40% !important;
+      }
+
+      .footer-main-content {
+        padding: 20px 0px !important;
+
+        .ant-row > .ant-col:has(.footer-address) {
+          .address span {
+            line-height: 1.5em;
+          }
+        }
+
+        .contact-form {
+          .ant-form-item {
+            padding: 0px 0px !important;
+
+            .ant-form-item-row {
+              .ant-form-item-label {
+                padding: 0px !important;
+              }
+            }
+          }
+
+          .contact-form-title {
+            text-align: center;
+            margin: 0px 0px 8px !important;
+          }
+
+          .submit-contact-form-btn {
+            margin: 8px 0px 0px !important;
+            width: calc(100% - 33px);
+          }
+        }
+
+        .footer-address {
+          .ant-typography {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 8px;
+          }
+        }
+      }
+
+      .footer-copyright {
+        .ant-flex {
+          flex-direction: column-reverse;
+          row-gap: 15px;
+          text-align: center;
+
+          span {
+            color: $red-1;
+            font-weight: 700;
+            line-height: 1.2em;
+          }
+
+          .ant-space > .ant-space-item svg {
+            height: 1.1em !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .client-header {
+    height: 50px !important;
+    padding: 0px 50px !important;
+  }
+
+  .client-header-logo {
+    img {
+      width: 135px;
+      height: 35px;
+    }
+  }
+
+  .ant-layout-footer {
+    padding: 0 50px !important;
+
+    .footer-container {
+      .footer-logo > a > .ant-image > img {
+        width: 40% !important;
+      }
+
+      .footer-main-content {
+        .ant-row > .ant-col:has(.footer-address) {
+          .address span {
+            line-height: 1.5em;
+          }
+        }
+
+        .contact-form {
+          .contact-form-title {
+            text-align: center;
+            margin: 0px 0px 8px !important;
+          }
+
+          .submit-contact-form-btn {
+            margin: 8px 0px 0px !important;
+            width: calc(100% - 33px);
+          }
+        }
+
+        .footer-address {
+          .ant-typography {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 8px;
+          }
+        }
+      }
+
+      .footer-copyright {
+        .ant-flex {
+          flex-direction: column-reverse;
+          row-gap: 15px;
+          text-align: center;
+
+          span {
+            color: $red-1;
+            font-weight: 700;
+            line-height: 1.5em;
+          }
+
+          .ant-space > .ant-space-item svg {
+            height: 1.3em !important;
+          }
+        }
+      }
+    }
+  }
+}
